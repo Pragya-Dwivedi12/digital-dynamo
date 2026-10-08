@@ -107,28 +107,28 @@ export default function Home() {
                         <img src={videoEditing} alt="Video Editing" className="card-img" />
                         <h3>Video Editing</h3>
                         <p>Transform your raw footage into high-impact, engaging videos that get results.</p>
-                        <button className="btn-icon">&rarr;</button>
+                     
                     </div>
 
                     <div className="service-card">
                         <img src={ShootPro} alt="Shoot Production" className="card-img" />
                         <h3>Shoot Production</h3>
                         <p>Professional video shoots for courses, ads, brand films and more—from concept to creation.</p>
-                        <button className="btn-icon">&rarr;</button>
+                       
                     </div>
 
                     <div className="service-card">
                         <img src={socialMedia} alt="Social Media Management" className="card-img" />
                         <h3>Social Media Management</h3>
                         <p>Consistent content, stronger engagement, and a growing community for your brand.</p>
-                        <button className="btn-icon">&rarr;</button>
+                      
                     </div>
 
                     <div className="service-card">
                         <img src={Brand} alt="Brand Strategy & Ads" className="card-img" />
                         <h3>Brand Strategy & Ads</h3>
                         <p>Data-driven strategies and high-performing ad campaigns to scale your brand faster.</p>
-                        <button className="btn-icon">&rarr;</button>
+                       
                     </div>
                 </div>
             </section>

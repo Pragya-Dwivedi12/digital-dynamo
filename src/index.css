@@ -1,38 +1,148 @@
-/* --- Global Mobile Responsive Fixes --- */
-* {
-  box-sizing: border-box;
+/* ==========================================
+   GLOBAL RESPONSIVE & LAYOUT OVERLAP FIX
+   ========================================== */
+
+/* Universal Box Sizing & Horizontal Scroll Lock */
+*, *::before, *::after {
+  box-sizing: border-box !important;
 }
 
 html, body {
-  overflow-x: hidden;
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
   margin: 0;
   padding: 0;
 }
 
-@media (max-width: 768px) {
-  /* Screen se baahar jane wale elements ko vertical (ek ke niche ek) karo */
-  div, section, main {
+/* Images & Media responsive fix */
+img, video, iframe {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Flex containers ko multi-line wrap enable karna */
+div, section, header, footer {
+  max-width: 100% !important;
+}
+
+/* ==========================================
+   MOBILE & TABLET BREAKPOINT (< 768px)
+   ========================================== */
+@media screen and (max-width: 768px) {
+
+  /* 1. HERO SECTION FIXES */
+  .hero-overlay-content,
+  [class*="hero-overlay"],
+  [class*="hero-content"] {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    padding: 20px 15px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  h1, .hero-title, [class*="hero-title"] {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .hero-btn-group, [class*="btn-group"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .btn-primary, .btn-secondary, button, a.btn-primary {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 5px 0 !important;
+  }
+
+  /* 2. STATS COUNTER FIX */
+  .stats-container, [class*="stats-container"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 25px !important;
+  }
+
+  .stat-card, [class*="stat-card"] {
+    width: 90% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  /* 3. SERVICES & PORTFOLIO GRID / CARDS FIX */
+  .services-grid, 
+  .portfolio-grid, 
+  .cards-container,
+  [class*="-grid"], 
+  [class*="grid-"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  .service-card, 
+  .portfolio-card, 
+  .card, 
+  [class*="-card"] {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    position: static !important;
+  }
+
+  /* 4. EDUCATOR SPECIAL COMBO & OFFER BOXES FIX */
+  .offer-container,
+  .combo-container,
+  [class*="offer"],
+  [class*="combo"] {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    position: static !important;
+    gap: 20px !important;
+  }
+
+  /* Fixed height/width overflow elements reset */
+  [style*="width"], [style*="height"] {
     max-width: 100% !important;
   }
 
-  /* Flex items ko row se column me convert karo */
-  [style*="display: flex"], 
-  [style*="display:flex"] {
+  /* 5. NAVIGATION / HEADER RESPONSIVE ADJUSTMENT */
+  nav, header {
     flex-wrap: wrap !important;
+    padding: 10px 15px !important;
   }
 
-  /* Text size fix for phone screens */
-  h1 {
-    font-size: 1.8rem !important;
+  /* Floating Whatsapp / Buttons placement fix */
+  .whatsapp-float, [class*="whatsapp"] {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 15px auto !important;
   }
+}
 
-  h2 {
-    font-size: 1.5rem !important;
-  }
-
-  /* Badges & overlap button fix */
-  p, span, button, a {
-    word-break: break-word;
+/* ==========================================
+   DESKTOP / LAPTOP BREAKPOINT (> 769px)
+   ========================================== */
+@media screen and (min-width: 769px) {
+  .hero-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 }
