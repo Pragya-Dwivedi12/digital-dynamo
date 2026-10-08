@@ -1,0 +1,441 @@
+/* ==========================================
+   CONTACT PAGE & HERO STYLING
+   ========================================== */
+.contact-page {
+  padding: 2rem 5%;
+  color: #ffffff;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.badge-tag {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  color: #94a3b8;
+  max-width: 650px;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hero-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   CONTACT CARDS & INLINE CONSULTATION PICKER
+   ========================================== */
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.8rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.border-glow {
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.1);
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-card p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.card-highlight {
+  color: #38bdf8 !important;
+  font-weight: 600;
+  font-size: 0.95rem !important;
+}
+
+/* Consultation Card & Inline Time Picker */
+.consultation-card {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-success-msg {
+  color: #38bdf8 !important;
+  font-weight: 600;
+  font-size: 0.82rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+.inline-picker-box {
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: left;
+}
+
+.picker-field label {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 0.2rem;
+}
+
+.picker-field input,
+.picker-field select {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.picker-btn-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.btn-confirm-sm {
+  background: #f59e0b;
+  color: #0f172a;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.btn-cancel-sm {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.btn-gold-sm {
+  background: #f59e0b;
+  color: #0f172a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gold-sm:hover {
+  background: #d97706;
+}
+
+.impact-note {
+  color: #64748b;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   FORM & SIDEBAR GRID SECTION
+   ========================================== */
+.contact-body-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.form-container {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem;
+}
+
+.form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtext {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  outline: none;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #38bdf8;
+}
+
+.btn-gold-wide {
+  background: #f59e0b;
+  color: #0f172a;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.btn-gold-wide:hover {
+  background: #d97706;
+}
+
+.privacy-note {
+  text-align: center;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================
+   THANK YOU & WHATSAPP CARD STYLING
+   ========================================== */
+.thankyou-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-icon {
+  font-size: 3.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.thankyou-card h2 {
+  font-size: 1.8rem;
+  color: #38bdf8;
+  margin-bottom: 0.8rem;
+}
+
+.thankyou-subtext {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 450px;
+  margin-bottom: 1.8rem;
+}
+
+.thankyou-cta-box {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 1.5rem;
+}
+
+.urgent-note {
+  color: #f1f5f9;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da851;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+.btn-reset-form {
+  background: transparent;
+  color: #64748b;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.btn-reset-form:hover {
+  color: #38bdf8;
+}
+
+/* ==========================================
+   SIDEBAR STYLING
+   ========================================== */
+.services-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-box {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.sidebar-sub {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-services-list h4 {
+  color: #38bdf8;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.sidebar-services-list p {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  font-style: italic;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+}
+
+.testimonial-author {
+  margin-top: 0.8rem;
+  text-align: right;
+  color: #38bdf8;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .contact-body-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,346 @@
+/* BASE LAYOUT */
+.services-page-container {
+  background-color: #0b0f19;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding: 1rem 3rem 3rem 3rem;
+  box-sizing: border-box;
+}
+
+.purple-gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.s-sub-tag {
+  color: #38bdf8;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* HERO SECTION */
+.s-hero-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.s-hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0.2rem 0 0.8rem 0;
+  line-height: 1.1;
+}
+
+.s-hero-desc {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.s-features-pills {
+  display: flex;
+  gap: 2rem;
+}
+
+.pill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pill-icon {
+  font-size: 1.2rem;
+}
+
+.pill-item strong {
+  display: block;
+  font-size: 0.8rem;
+  color: #f1f5f9;
+}
+
+.pill-item p {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.s-hero-img-frame {
+  width: 100%;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.s-hero-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 4 SERVICES GRID */
+.services-4grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.s-card-img {
+  position: relative;
+  height: 150px;
+}
+
+.s-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.s-card-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.s-card-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.s-card-body p {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+}
+
+.s-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.s-tags-row span {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  font-size: 0.68rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.s-link-btn {
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  cursor: pointer;
+}
+
+.arrow-circle {
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PROCESS SECTION */
+.process-section {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 0.9fr 2.1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.process-header h2 {
+  font-size: 1.6rem;
+  margin: 0.2rem 0;
+}
+
+.process-header p {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.process-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-item {
+  max-width: 130px;
+}
+
+.step-num-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #38bdf8;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.step-num-icon span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a855f7;
+}
+
+.step-item h4 {
+  font-size: 0.9rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.step-item p {
+  color: #64748b;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.step-arrow {
+  color: #334155;
+  font-size: 1.2rem;
+}
+
+/* CTA BANNER */
+.s-cta-banner {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.handwriting-cta {
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.cta-center h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.4rem 0;
+}
+
+.cta-center p {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.cta-btn {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.cta-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* FOOTER */
+.s-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.footer-left strong { color: #38bdf8; margin-right: 0.8rem; }
+.footer-left span { color: #64748b; font-size: 0.7rem; }
+.footer-right { display: flex; gap: 1.5rem; color: #94a3b8; }
+.handwriting-footer { color: #a855f7; font-style: italic; }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+  .services-4grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-section, .s-cta-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .s-hero-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-4grid {
+    grid-template-columns: 1fr;
+  }
+}

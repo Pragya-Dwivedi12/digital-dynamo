@@ -1,0 +1,368 @@
+/* GENERAL PAGE WRAPPER */
+.portfolio-page-container {
+  background-color: #0b0f19;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding: 1rem 3rem 3rem 3rem;
+  box-sizing: border-box;
+}
+
+.purple-gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.p-sub-tag {
+  color: #38bdf8;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+/* HERO SECTION */
+.p-hero-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 2.5rem;
+  align-items: center;
+}
+
+.p-hero-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.p-hero-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.p-hero-btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-solid-purple {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.6rem;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+
+.p-hero-img-frame {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.p-hero-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECTION HEADER ROW */
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem 0;
+}
+
+.section-subtitle {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.header-right-action {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.handwriting-sub {
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* CASE STUDIES GRID (4 CARDS) */
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.case-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-card-img {
+  position: relative;
+  height: 160px;
+  width: 100%;
+}
+
+.case-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.case-card-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.case-card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.case-card-body p {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0 0 1.2rem 0;
+}
+
+.case-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.8rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.stat-item h4 {
+  color: #38bdf8;
+  font-size: 1.1rem;
+  margin: 0 0 0.1rem 0;
+}
+
+.stat-item p {
+  color: #64748b;
+  font-size: 0.65rem;
+  margin: 0;
+}
+
+.case-link-btn {
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  cursor: pointer;
+}
+
+.arrow-circle {
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+/* TESTIMONIALS BANNER */
+.testimonials-banner {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.8fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.testi-header h2 {
+  font-size: 1.5rem;
+  margin: 0.3rem 0;
+  line-height: 1.2;
+}
+
+.testi-header p {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.testi-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.testi-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.testi-user-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.testi-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 0.8rem;
+}
+
+.testi-text {
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  margin: 0 0 0.8rem 0;
+}
+
+.testi-name {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.testi-role {
+  color: #64748b;
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.testi-cta-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+  text-align: right;
+}
+
+.handwriting-cta {
+  color: #a855f7;
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+/* FOOTER */
+.p-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+}
+
+.footer-tagline {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.footer-corner-handwriting {
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+  .case-studies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonials-banner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-hero-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testi-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
