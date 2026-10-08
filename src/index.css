@@ -1,0 +1,38 @@
+/* --- Global Mobile Responsive Fixes --- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  /* Screen se baahar jane wale elements ko vertical (ek ke niche ek) karo */
+  div, section, main {
+    max-width: 100% !important;
+  }
+
+  /* Flex items ko row se column me convert karo */
+  [style*="display: flex"], 
+  [style*="display:flex"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Text size fix for phone screens */
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Badges & overlap button fix */
+  p, span, button, a {
+    word-break: break-word;
+  }
+}
