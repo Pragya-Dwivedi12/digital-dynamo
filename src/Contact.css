@@ -440,3 +440,20 @@
     font-size: 2.2rem;
   }
 }
+/* Mobile Only Services Fix */
+@media screen and (max-width: 768px) {
+  .services-grid, 
+  .cards-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 20px !important;
+  }
+
+  .service-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+}

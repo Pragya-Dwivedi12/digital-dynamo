@@ -1,43 +1,16 @@
-/* Universal Box-Sizing to prevent overflow */
+/* Clean Reset for Layout & Horizontal Scroll Lock */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 html, body {
-  overflow-x: hidden;
-  width: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* SIRF MOBILE PHONES KE LIYE (Laptop layout bilkul touch nahi hoga) */
-@media screen and (max-width: 768px) {
-  
-  /* Grid/Flex items stack neatly on phone */
-  .services-grid, 
-  .portfolio-grid, 
-  .stats-container,
-  .hero-btn-group,
-  .offer-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    gap: 20px !important;
-  }
-
-  /* Cards responsiveness on phone */
-  .service-card, 
-  .portfolio-card, 
-  .stat-card,
-  .offer-card {
-    width: 100% !important;
-    max-width: 340px !important;
-    margin: 0 auto !important;
-  }
-
-  /* Text & Title sizing for mobile */
-  h1, .hero-title {
-    font-size: 1.8rem !important;
-  }
+img, video {
+  max-width: 100%;
+  height: auto;
 }
