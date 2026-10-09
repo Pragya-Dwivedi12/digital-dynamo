@@ -5,6 +5,7 @@
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 1.5rem 3rem 1.5rem;
+  width: 100%;
 }
 
 .gradient-purple-blue {
@@ -362,7 +363,7 @@
   padding-left: 1rem;
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN (TABLETS & MEDIUM SCREENS) */
 @media (max-width: 1024px) {
   .about-hero-grid,
   .our-story-section,
@@ -386,5 +387,79 @@
     text-align: left;
     border-left: none;
     padding-left: 0;
+  }
+}
+
+/* RESPONSIVE DESIGN (MOBILE PHONES < 768px) */
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding: 0 0.8rem 2rem 0.8rem;
+  }
+
+  .about-hero-grid {
+    grid-template-columns: 1fr !important;
+    padding: 1.5rem 1rem !important;
+    gap: 1.5rem !important;
+  }
+
+  .about-hero-title {
+    font-size: 1.8rem !important;
+  }
+
+  .about-hero-desc {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .about-hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .about-hero-actions button,
+  .about-hero-actions a {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .about-hero-visual {
+    height: 200px !important;
+  }
+
+  .our-story-section {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .story-image-box {
+    height: 200px !important;
+  }
+
+  .story-text-box, .story-quote-card {
+    padding: 1.2rem !important;
+  }
+
+  .mvv-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .journey-numbers-bar {
+    padding: 1.2rem 1rem !important;
+    gap: 1.2rem !important;
+  }
+
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .team-banner-section {
+    padding: 1.2rem 1rem !important;
+    gap: 1.2rem !important;
+  }
+
+  .team-image-side {
+    height: 180px !important;
   }
 }
