@@ -43,8 +43,8 @@ export default function About() {
 
           <div className="about-hero-actions">
             <Link to="/services">
-            <button className="btn-purple-blue">Our Services &rarr;</button>
-           </Link>
+              <button className="btn-purple-blue">Our Services &rarr;</button>
+            </Link>
           </div>
         </div>
 
@@ -52,7 +52,7 @@ export default function About() {
           <img 
             src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" 
             alt="Workspace Setup" 
-            className="hero-img"
+            className="about-hero-img"
           />
         </div>
       </section>
