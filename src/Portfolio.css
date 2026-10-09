@@ -395,4 +395,33 @@
   }
 }
 
+/* Portfolio Mobile Padding Fix */
+@media screen and (max-width: 768px) {
+  /* 1. Main outer wrapper ki side padding bilkul kam karein */
+  .portfolio-wrapper,
+  .portfolio-container,
+  div[class*="portfolio"] {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Andar ke sabhi cards aur hero section ki extra inner padding kam karein */
+  .portfolio-hero-grid,
+  .portfolio-card,
+  .portfolio-section,
+  div[class*="portfolio"] > section,
+  div[class*="portfolio"] > div {
+    padding: 1rem 0.8rem !important; /* Upar-niche 1rem, Left-right sirf 0.8rem */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+
 }
