@@ -21,28 +21,26 @@ export default function Home() {
         <div className="home-container">
             {/* Header / Navbar */}
             <header className="navbar">
-                <div className="logo-container">
-                    <h2 className="logo-text-white">Digital</h2>
-                    <h2 className="logo-text-blue">Dynamo</h2>
-                </div>
+        <div className="logo-container">
+          <h2 className="logo-text-white">Digital</h2>
+          <h2 className="logo-text-blue">Dynamo</h2>
+        </div>
 
-                <nav className="nav-menu">
-                    <ul className="nav-links">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/services">Services</Link></li>
-                        <li><Link to="/portfolio">Portfolio</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                    </ul>
-                </nav>
+        <nav className="nav-menu">
+          <ul className="nav-links">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/portfolio">Portfolio</Link></li>
+            <li><Link to="/about" className="active">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
 
-                <div className="nav-cta">
-                    <span className="tagline">Ideas. Content. Growth.</span>
-                    <Link to="/contact">
-                        <button className="btn-primary">Let's Grow Together &rarr;</button>
-                    </Link>
-                </div>
-            </header>
+        <div className="nav-cta">
+          <span className="tagline">Ideas. Content. Growth.</span>
+          <button className="btn-primary">Let's Grow Together &rarr;</button>
+        </div>
+      </header>
 
             {/* Hero Section (Text Over Image) */}
             <section className="hero-section">

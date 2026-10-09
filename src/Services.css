@@ -396,34 +396,4 @@
   .footer-right {
     justify-content: center !important;
   }
-
-/* About Page Mobile Fix */
-@media screen and (max-width: 768px) {
-  .about-wrapper,
-  .home-container.about-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 0.8rem !important;
-    padding-right: 0.8rem !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-  }
-
-  .about-hero-grid,
-  .our-story-section,
-  .journey-numbers-bar,
-  .team-banner-section {
-    width: 100% !important;
-    grid-template-columns: 1fr !important;
-    padding: 1.2rem 0.8rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .about-hero-title {
-    font-size: 1.8rem !important;
-  }
-}
-  
 }
