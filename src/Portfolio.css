@@ -342,12 +342,12 @@
   font-style: italic;
 }
 
-/* RESPONSIVE DESIGN */
+
 @media (max-width: 1100px) {
   .case-studies-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .testimonials-banner {
     grid-template-columns: 1fr;
   }
@@ -357,71 +357,71 @@
   .p-hero-section {
     grid-template-columns: 1fr;
   }
-  
+
   .case-studies-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .testi-cards-container {
     grid-template-columns: 1fr;
   }
 
-/* About Page Mobile Fix */
-@media screen and (max-width: 768px) {
-  .about-wrapper,
-  .home-container.about-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 0.8rem !important;
-    padding-right: 0.8rem !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
+
+  @media screen and (max-width: 768px) {
+
+    .about-wrapper,
+    .home-container.about-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 0.8rem !important;
+      padding-right: 0.8rem !important;
+      margin: 0 auto !important;
+      box-sizing: border-box !important;
+    }
+
+    .about-hero-grid,
+    .our-story-section,
+    .journey-numbers-bar,
+    .team-banner-section {
+      width: 100% !important;
+      grid-template-columns: 1fr !important;
+      padding: 1.2rem 0.8rem !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .about-hero-title {
+      font-size: 1.8rem !important;
+    }
   }
 
-  .about-hero-grid,
-  .our-story-section,
-  .journey-numbers-bar,
-  .team-banner-section {
-    width: 100% !important;
-    grid-template-columns: 1fr !important;
-    padding: 1.2rem 0.8rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-  }
+  @media screen and (max-width: 768px) {
 
-  .about-hero-title {
-    font-size: 1.8rem !important;
-  }
-}
+    .portfolio-wrapper,
+    .portfolio-container,
+     div[class*="portfolio"] {
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      padding-top: 1rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
 
-/* Portfolio Mobile Padding Fix */
-@media screen and (max-width: 768px) {
-  /* 1. Main outer wrapper ki side padding bilkul kam karein */
-  .portfolio-wrapper,
-  .portfolio-container,
-  div[class*="portfolio"] {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    padding-top: 1rem !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+    .portfolio-hero-grid,
+    .portfolio-card,
+    .portfolio-section,
+    div[class*="portfolio"]>section,
+    div[class*="portfolio"]>div {
+      padding: 1rem 0.8rem !important;
+      /* Upar-niche 1rem, Left-right sirf 0.8rem */
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
   }
-
-  /* 2. Andar ke sabhi cards aur hero section ki extra inner padding kam karein */
-  .portfolio-hero-grid,
-  .portfolio-card,
-  .portfolio-section,
-  div[class*="portfolio"] > section,
-  div[class*="portfolio"] > div {
-    padding: 1rem 0.8rem !important; /* Upar-niche 1rem, Left-right sirf 0.8rem */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-}
 
 
 }

@@ -5,28 +5,57 @@ import '../Contact.css';
 
 export default function Contact() {
   const [showTimePicker, setShowTimePicker] = useState(false);
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedTime, setSelectedTime] = useState("");
+  const [showQrInCard, setShowQrInCard] = useState(false); // Card ke andar QR dikhane ke liye state
   const [bookedStatus, setBookedStatus] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [coachingName, setCoachingName] = useState("");
+  const [ytLink, setYtLink] = useState("");
+  const [instaLink, setInstaLink] = useState("");
+
+  const handleConsultationSubmit = (e) => {
+    e.preventDefault();
+    if (!coachingName) {
+      alert("Please enter your Coaching or Brand Name!");
+      return;
+    }
+    // Form hide karke usi card ke andar QR Code show karein
+    setShowQrInCard(true);
+  };
+
+  const handlePaymentConfirmed = () => {
+    // Automatic 2 days logic at 6:00 PM
+    const bookingDate = new Date();
+    bookingDate.setDate(bookingDate.getDate() + 2);
+    const formattedDate = bookingDate.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+    const assignedSlot = `${formattedDate}, 06:00 PM`;
+
+    const confirmationMsg = `🎉 *Booking & Payment Confirmed - Digital Dynamo*\n` +
+      `----------------------------------------\n` +
+      `📌 *Coaching/Brand:* ${coachingName}\n` +
+      `🔗 *YouTube:* ${ytLink || 'N/A'}\n` +
+      `📸 *Instagram:* ${instaLink || 'N/A'}\n` +
+      `💰 *Fee Paid:* ₹1000 via QR Scanner\n` +
+      `📅 *Assigned Slot:* ${assignedSlot}\n` +
+      `----------------------------------------\n` +
+      `✅ Payment is complete. If there is any change in the slot timing, we will share the update with you here.`;
+
+    const consultationWaUrl = `https://wa.me/918815800027?text=${encodeURIComponent(confirmationMsg)}`;
+
+    setBookedStatus(`Confirmed for ${assignedSlot}`);
+    setShowQrInCard(false);
+    setShowTimePicker(false);
+
+    // Auto Open WhatsApp
+    window.open(consultationWaUrl, "_blank");
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
   };
 
-  const whatsappNumber = "918815800027";
   const whatsappMessage = encodeURIComponent("Hello Digital Dynamo Team! I submitted a query on your website and would like an urgent response.");
-  const whatsappUrl = `https://wa.me/${918815800027}?text=${whatsappMessage}`;
-
-  const handleSaveSlot = () => {
-    if (selectedDate && selectedTime) {
-      setBookedStatus(`${selectedDate} (${selectedTime})`);
-      setShowTimePicker(false);
-    } else {
-      alert("Kripya Date aur Time dono select karein!");
-    }
-  };
+  const whatsappUrl = `https://wa.me/918815800027?text=${whatsappMessage}`;
 
   return (
     <div className="home-container">
@@ -85,53 +114,106 @@ export default function Contact() {
               <p className="card-highlight">digitaldynamo964@gmail.com</p>
             </div>
 
+            {/* CONSULTATION CARD WITH INLINE QR */}
             <div className="contact-card border-glow consultation-card">
               <span className="card-icon">📅</span>
               <h3>Book a Consultation</h3>
-              <p>Free 30-minute strategy call</p>
+              <p>1-on-1 Strategy & Growth Call</p>
 
-              {!showTimePicker ? (
+              <div className="fee-badge">
+                <span className="fee-amount">₹1000</span>
+                <span className="fee-label">-UPI Consultation Fee</span>
+              </div>
+
+              {!showTimePicker && !showQrInCard ? (
                 <>
-                  {bookedStatus && <p className="booking-success-msg">✓ {bookedStatus}</p>}
+                  {bookedStatus && <p className="booking-status-msg" style={{color: '#38bdf8', fontSize: '0.85rem', margin: '0.50rem 0'}}>✓ {bookedStatus}</p>}
                   <button
                     className="btn-gold-sm"
                     onClick={() => setShowTimePicker(true)}
                   >
-                    {bookedStatus ? "Change Time" : "Choose a Time"} &rarr;
+                    {bookedStatus ? "Book Another" : "Fill your Information"} &rarr;
                   </button>
                 </>
+              ) : showQrInCard ? (
+                /* --- INLINE QR CODE SECTION INSIDE THE CARD --- */
+                <div className="inline-qr-box">
+                  <h4 style={{ color: '#38bdf8', marginBottom: '0.5rem' }}>Scan & Pay ₹1000</h4>
+                  <p style={{ fontSize: '0.75rem', color: '#94a3b8', marginBottom: '0.8rem' }}>Please scan through PhonePe, GPay, Paytm.</p>
+                  
+                  <div className="qr-image-container" style={{ background: '#fff', padding: '0.5rem', borderRadius: '8px', display: 'inline-block' }}>
+                    <img 
+                      src="/Scanner.jpeg"
+                      alt="Payment QR Code" 
+                      style={{ width: '130px', height: '130px', display: 'block' }}
+                    />
+                  </div>
+
+                  <p style={{ fontSize: '0.8rem', color: '#38bdf8', margin: '0.6rem 0' }}>UPI ID: <strong>8815800027@paytm</strong></p>
+
+                  <div className="picker-btn-group">
+                    <button className="btn-confirm-sm" onClick={handlePaymentConfirmed}>
+                      Payment Done? Confirm 💬
+                    </button>
+                    <button 
+                      type="button" 
+                      className="btn-cancel-sm" 
+                      onClick={() => setShowQrInCard(false)}
+                    >
+                      Back
+                    </button>
+                  </div>
+                </div>
               ) : (
-                <div className="inline-picker-box">
+                /* --- CONSULTATION FORM --- */
+                <form className="inline-picker-box" onSubmit={handleConsultationSubmit}>
                   <div className="picker-field">
-                    <label>Select Date:</label>
+                    <label>Coaching/Brand Name *</label>
                     <input
-                      type="date"
-                      value={selectedDate}
-                      onChange={(e) => setSelectedDate(e.target.value)}
+                      type="text"
+                      placeholder="e.g. Sparsh Classes"
+                      value={coachingName}
+                      onChange={(e) => setCoachingName(e.target.value)}
+                      required
                     />
                   </div>
 
                   <div className="picker-field">
-                    <label>Select Time Slot:</label>
-                    <select
-                      value={selectedTime}
-                      onChange={(e) => setSelectedTime(e.target.value)}
-                    >
-                      <option value="">-- Choose Slot --</option>
-                      <option value="10:00 AM">10:00 AM - 10:30 AM</option>
-                      <option value="11:30 AM">11:30 AM - 12:00 PM</option>
-                      <option value="02:00 PM">02:00 PM - 02:30 PM</option>
-                      <option value="04:00 PM">04:00 PM - 04:30 PM</option>
-                    </select>
+                    <label>YouTube Channel Link</label>
+                    <input
+                      type="url"
+                      placeholder="https://youtube.com/..."
+                      value={ytLink}
+                      onChange={(e) => setYtLink(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="picker-field">
+                    <label>Instagram Handle / Link</label>
+                    <input
+                      type="text"
+                      placeholder="@yourusername or link"
+                      value={instaLink}
+                      onChange={(e) => setInstaLink(e.target.value)}
+                    />
                   </div>
 
                   <div className="picker-btn-group">
-                    <button className="btn-confirm-sm" onClick={handleSaveSlot}>Confirm</button>
-                    <button className="btn-cancel-sm" onClick={() => setShowTimePicker(false)}>Cancel</button>
+                    <button type="submit" className="btn-confirm-sm">
+                      Pay via UPI &amp; Confirm
+                    </button>
+                    <button
+                      type="button"
+                      className="btn-cancel-sm"
+                      onClick={() => setShowTimePicker(false)}
+                    >
+                      Cancel
+                    </button>
                   </div>
-                </div>
+                </form>
               )}
             </div>
+
           </div>
 
           <div className="impact-note">
@@ -146,7 +228,6 @@ export default function Contact() {
           {/* FORM CONTAINER */}
           <div className="form-container">
             {isSubmitted ? (
-              /* --- THANK YOU & WHATSAPP CARD --- */
               <div className="thankyou-card">
                 <span className="thankyou-icon">🎉</span>
                 <h2>Thank You for Reaching Out!</h2>
@@ -156,56 +237,53 @@ export default function Contact() {
 
                 <div className="thankyou-cta-box">
                   <p className="urgent-note">Need an urgent reply?</p>
-                  <a 
-                    href={whatsappUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-whatsapp"
                   >
                     💬 Chat on WhatsApp
                   </a>
                 </div>
 
-                <button 
-                  className="btn-reset-form" 
+                <button
+                  className="btn-reset-form"
                   onClick={() => setIsSubmitted(false)}
                 >
                   &larr; Send Another Message
                 </button>
               </div>
             ) : (
-              /* --- NORMAL CONTACT FORM --- */
-              <>
+              <form className="contact-form" onSubmit={handleSubmit}>
                 <span className="badge-tag">SEND US A MESSAGE</span>
                 <h2>Start Your Project</h2>
                 <p className="form-subtext">Fill out the form below and our team will get back to you within 24 hours.</p>
 
-                <form className="contact-form" onSubmit={handleSubmit}>
-                  <div className="form-group">
-                    <label>Name *</label>
-                    <input type="text" placeholder="Your full name" required />
-                  </div>
+                <div className="form-group">
+                  <label>Name *</label>
+                  <input type="text" placeholder="Your full name" required />
+                </div>
 
-                  <div className="form-group">
-                    <label>Business *</label>
-                    <input type="text" placeholder="Your business or brand name" required />
-                  </div>
+                <div className="form-group">
+                  <label>Business *</label>
+                  <input type="text" placeholder="Your business or brand name" required />
+                </div>
 
-                  <div className="form-group">
-                    <label>Service Needed *</label>
-                    <select required>
-                      <option value="">Select a service</option>
-                      <option value="video-editing">Video Editing</option>
-                      <option value="shoot-production">Shoot Production</option>
-                      <option value="social-media">Social Media Management</option>
-                      <option value="brand-strategy">Brand Strategy &amp; Ads</option>
-                    </select>
-                  </div>
+                <div className="form-group">
+                  <label>Service Needed *</label>
+                  <select required>
+                    <option value="">Select a service</option>
+                    <option value="video-editing">Video Editing</option>
+                    <option value="shoot-production">Shoot Production</option>
+                    <option value="social-media">Social Media Management</option>
+                    <option value="brand-strategy">Brand Strategy &amp; Ads</option>
+                  </select>
+                </div>
 
-                  <button type="submit" className="btn-gold-wide">Submit &rarr;</button>
-                  <p className="privacy-note"><small>🔒 Your information is safe with us. We respect your privacy.</small></p>
-                </form>
-              </>
+                <button type="submit" className="btn-gold-wide">Submit &rarr;</button>
+                <p className="privacy-note"><small>🔒 Your information is safe with us. We respect your privacy.</small></p>
+              </form>
             )}
           </div>
 
