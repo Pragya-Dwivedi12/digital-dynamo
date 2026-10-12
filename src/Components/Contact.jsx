@@ -127,7 +127,7 @@ export default function Contact() {
 
               {!showTimePicker && !showQrInCard ? (
                 <>
-                  {bookedStatus && <p className="booking-status-msg" style={{color: '#38bdf8', fontSize: '0.85rem', margin: '0.50rem 0'}}>✓ {bookedStatus}</p>}
+                  {bookedStatus && <p className="booking-status-msg" style={{ color: '#38bdf8', fontSize: '0.85rem', margin: '0.50rem 0' }}>✓ {bookedStatus}</p>}
                   <button
                     className="btn-gold-sm"
                     onClick={() => setShowTimePicker(true)}
@@ -140,13 +140,33 @@ export default function Contact() {
                 <div className="inline-qr-box">
                   <h4 style={{ color: '#38bdf8', marginBottom: '0.5rem' }}>Scan & Pay ₹1000</h4>
                   <p style={{ fontSize: '0.75rem', color: '#94a3b8', marginBottom: '0.8rem' }}>Please scan through PhonePe, GPay, Paytm.</p>
-                  
+
                   <div className="qr-image-container" style={{ background: '#fff', padding: '0.5rem', borderRadius: '8px', display: 'inline-block' }}>
-                    <img 
+                    <img
                       src="/Scanner.jpeg"
-                      alt="Payment QR Code" 
-                      style={{ width: '130px', height: '130px', display: 'block' }}
+                      alt="Payment QR Code"
+                      style={{ width: '130px', height: '130px', display: 'block', margin:'0 auto'}}
                     />
+
+                    {/* Mobile Direct Pay Button */}
+                    <a
+                      href="upi://pay?pa=8815800027@paytm&pn=DigitalDynamo&am=1000&cu=INR"
+                      className="btn-pay-direct"
+                      style={{
+                        display: 'inline-block',
+                        margin: '0.5rem 0',
+                        padding: '8px 16px',
+                        backgroundColor: '#38bdf8',
+                        color: '#000',
+                        fontWeight: 'bold',
+                        borderRadius: '6px',
+                        textDecoration: 'none',
+                        fontSize: '0.85rem'
+                      }}
+                    >
+                      📲 Open UPI App
+                    </a>
+
                   </div>
 
                   <p style={{ fontSize: '0.8rem', color: '#38bdf8', margin: '0.6rem 0' }}>UPI ID: <strong>8815800027@paytm</strong></p>
@@ -155,9 +175,9 @@ export default function Contact() {
                     <button className="btn-confirm-sm" onClick={handlePaymentConfirmed}>
                       Payment Done? Confirm 💬
                     </button>
-                    <button 
-                      type="button" 
-                      className="btn-cancel-sm" 
+                    <button
+                      type="button"
+                      className="btn-cancel-sm"
                       onClick={() => setShowQrInCard(false)}
                     >
                       Back
